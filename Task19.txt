@@ -1,0 +1,33 @@
+ackage letcodeSathish;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Guvi {
+
+	public static void main(String[] args) throws InterruptedException {
+	WebDriver driver=new ChromeDriver();
+	
+	driver.get("https://www.guvi.in/register");
+	
+	driver.manage().window().maximize();
+	
+	driver.findElement(By.id("firstName")).sendKeys("Sathish");
+	
+	driver.findElement(By.id("lastName")).sendKeys("R");
+	
+	driver.findElement(By.id("emailInput")).sendKeys("sathish78@gmail.com");
+	
+	driver.findElement(By.id("passwordInput")).sendKeys("sathish@125");
+	
+	
+	driver.findElement(By.name("mobileNumberInput")).sendKeys("9098712255");
+	
+	driver.findElement(By.id("signup")).click();
+	
+    driver.quit();
+
+}
+
+}
